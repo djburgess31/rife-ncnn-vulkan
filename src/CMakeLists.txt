@@ -89,3 +89,8 @@ add_dependencies(rife-ncnn-vulkan generate-spirv)
 set(RIFE_LINK_LIBRARIES ncnn webp ${Vulkan_LIBRARY})
 
 target_link_libraries(rife-ncnn-vulkan ${RIFE_LINK_LIBRARIES})
+
+if (PROJECT_IS_TOP_LEVEL)
+    include(GNUInstallDirs)
+    install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/models/" DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+endif()
