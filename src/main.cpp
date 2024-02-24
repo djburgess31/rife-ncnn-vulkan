@@ -90,10 +90,10 @@ static std::vector<int> parse_optarg_int_array(const char* optarg)
 #endif // _WIN32
 
 // ncnn
-#include "cpu.h"
-#include "gpu.h"
-#include "platform.h"
-#include "benchmark.h"
+#include <ncnn/cpu.h>
+#include <ncnn/gpu.h>
+#include <ncnn/platform.h>
+#include <ncnn/benchmark.h>
 
 #include "rife.h"
 
